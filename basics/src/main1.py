@@ -6,19 +6,19 @@ Installation:
     - pip install uvicorn - Uvicorn is a lightning-fast ASGI server implementation
 
 Run: 
-    - command to run the API, `uvicorn main:app --reload`
-    main is the name of the script, app is the name of the variable that you initialize 
-    the API to(see below) and --reload reloads the server whenver the API python file 
+    - command to run the API, `uvicorn main1:app --reload`
+    where, main1 is the name of the script, app is the name of the variable that you initialize 
+    the API to(see below) and --reload reloads the server whenever the API python file 
     is updated.
 """
 
 """
 Advantages:
-    Data Validation: When we create normal API's, we need to do a lot of data validation 
+    1. Data Validation: When we create normal API's, we need to do a lot of data validation 
         when sending information to the API for example whether it is integer or proper 
         strings or etc. But here the FastAPI handles it for us.
 
-    Also, it generates auto-documentation.
+    2. Generates auto-documentation.
 """
 
 from fastapi import FastAPI, Path
@@ -30,8 +30,8 @@ app = FastAPI()
 """
 Create an endpoint
 
-Endpoint: is like the last end point in our url.
-Eg: Let's we have some url in our localhost and we would like to access the
+Endpoint: is like the last point in our url.
+Eg: Let's say we have some url in our localhost and we would like to access the
 home page, then the endpoint would be "localhost/homepage"
 
 Eg: In "facebook.com/home", the /home is like an endpoint for the facebook
